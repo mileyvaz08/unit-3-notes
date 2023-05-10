@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    .red{
+        background-color: red;
+    }
+    .green{
+        background-color: green;
+    }
+    .blue{
+        background-color: blue;
+    }
+    .pink{
+        color: pink;
+    }
+    .teal{
+        color: teal;
+    }
+    .purple{
+        color: purple;
+    }
+
+    .eggplant{
+        background-color: #533745;
+    }
+
+    .veronica{
+        background-color: #8447FF;
+    }
+
+    .teagreen{
+        background-color: #D0EFB1;
+    }
+
+    .lavender{
+        background-color: #D8D4F2;
+    }
+
+    .thistle{
+        background-color: #C4B2BC;
+    }
+
+    .tiffanyblue{
+        background-color: #AFE0CE;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra.
+            Semper quis lectus nulla at volutpat diam ut venenatis. Pellentesque habitant morbi tristique senectus et netus et.
+            Et malesuada fames ac turpis egestas maecenas. Morbi tristique senectus et netus.
+            Interdum consectetur libero id faucibus nisl tincidunt eget nullam. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec.</p>
+        <div class="row">
+            <h3>Background</h3>
+            <button id="1">RED</button>
+            <button id="2">GREEN</button>
+            <button id="3">BLUE</button>
+        </div>
+        <div class="row">
+            <h3>Text</h3>
+            <button id="4">PINK</button>
+            <button id="5">TEAL</button>
+            <button id="6">PURPLE</button>
+        </div>
+<script>
+    const content = document.querySelector('.content');
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
+    const eggplant= document.getElementById('4');
+    const veronica= document.getElementById('5');
+    const teagreen= document.getElementById('6');
+
+    const pink = document.getElementById('7');
+    const teal = document.getElementById('8');
+    const purple = document.getElementById('9');
+    const lavender= document.getElementById('10');
+    const thistle= document.getElementById('11');
+    const tiffanyblue= document.getElementById('12');
+
+    const clearButton = document.getElementById('clear');
+    red.addEventListener('click', function (e){
+        removeBGColor();
+       content.classList.add('red');
+    });
+
+    green.addEventListener('click', function (e){
+        removeBGColor();
+        content.classList.add('green');
+    });
+
+    blue.addEventListener('click', function (e){
+        removeBGColor();
+        content.classList.add('blue');
+    });
+
+    eggplant.addEventListener('click', function (e){
+        removeBGColor();
+        content.classList.add('eggplant');
+    });
+
+    veronica.addEventListener('click', function (e){
+        removeBGColor();
+        content.classList.add('veronica');
+    });
+
+    teagreen.addEventListener('click', function (e){
+        removeBGColor();
+        content.classList.add('teagreen');
+    });
+
+
+    pink.addEventListener('click', function (e){
+        removeTextColor();
+        content.classList.add('pink');
+    });
+
+    teal.addEventListener('click', function (e){
+        removeTextColor();
+        content.classList.add('teal');
+    });
+
+    purple.addEventListener('click', function (e){
+        removeTextColor();
+        content.classList.add('purple');
+    });
+
+    lavender.addEventListener('click', function (e){
+        removeTextColor();
+        content.classList.add('lavender');
+    });
+
+    thistle.addEventListener('click', function (e){
+        removeTextColor();
+        content.classList.add('thistle');
+    });
+
+    tiffanyblue.addEventListener('click', function (e){
+        removeTextColor();
+        content.classList.add('tiffanyblue');
+    });
+    function removeBGColor(){
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+        content.classList.remove('eggplant');
+        content.classList.remove('veronica');
+        content.classList.remove('teagreen');
+    }
+
+    function removeTextColor(){
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+        content.classList.remove('lavender');
+        content.classList.remove('thistle');
+        content.classList.remove('tiffanyblue');
+    }
+
+    clearButton.addEventListener('click', function (e){
+       removeBGColor();
+       removeTextColor();
+    });
+
+</script>
+</body>
+</html>
